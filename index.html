@@ -1,0 +1,67 @@
+<hmtl>
+    <head>
+        <title>CSS Grids</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: segoe ui;
+                line-height: 2;
+                color: olive;
+                background-color: antiquewhite;
+                padding: 10px;
+            }
+            .container {
+                width: 100%;
+                max-width: 1700px;
+                margin: 0 auto;
+            }
+            .row {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                gap: 1px;
+            }
+            .col-12 { grid-column: span 12;}
+            .col-6 { grid-column: span 6;}
+            .col-3 { grid-column: span 3;}
+            .col-9 { grid-column: span 9;}
+            @media (max-width: 600px) { .row { grid-template-columns: 1fr; } }
+            @media (min-width: 601px) and (max-width: 900px) { .row { grid-template-columns:
+            repeat(6, 1fr); } }
+            
+            @media (min-width: 901px) { .row { grid-template-columns: repeat(12, 1fr); } }
+            .box {
+                background-color: white;
+                border: 1px solid burlywood;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 20cqmax;
+                padding-left: 0cqmin;
+                margin: 2px;
+                text-align: center;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 box">Header</div>
+            </div>
+            <div class="row">
+                <div class="col-9 box">Main Content</div>
+                <div class="col-3 box">Sidebar</div>
+            </div>
+            <div class="row">
+                <div class="col-6 box">Sub Content 1</div>
+                <div class="col-6 box">Sub Content 2</div>
+            </div>
+            <div class="row">
+                <div class="col-12 box">Footer</div>
+            </div> 
+        </div>
+    </body>
+</hmtl>
